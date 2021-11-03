@@ -26,7 +26,7 @@ public class Server {
                         String str=dis.readUTF();
                         txtWriter("Client TCP Message : "+ str);
                         System.out.println("Client TCP: "+str);
-                        if(str.equals("exit"))
+                        if(str.equals("bye"))
                         {
                             System.out.println("TCP CLIENT IS CLOSING");
                             dis.close();
@@ -54,7 +54,7 @@ public class Server {
                         String str=new String(packet.getData(),0,packet.getLength());
                         txtWriter("Client UDP Message : "+ str);
                         System.out.println("Client UDP: "+str);
-                        if(str.equals("exit"))
+                        if(str.equals("bye"))
                         {
                             System.out.println("UDP CLIENT IS CLOSING");
                             break;
